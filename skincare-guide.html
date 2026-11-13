@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Guide – Glowify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Tab switch JS-less via checkbox trick – we use inline style toggle */
+        .guide-tab-btn { transition: all 0.3s; }
+    </style>
+</head>
+<body>
+
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">Glow<span>ify</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skin-type.html">Skin Type</a></li>
+                <li><a href="skincare-guide.html" class="active">Skincare Guide</a></li>
+                <li><a href="product-finder.html">Product Finder</a></li>
+                <li><a href="beauty-tips.html">Beauty Tips</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======= PAGE HEADER ======= -->
+    <div class="page-header">
+        <div class="container">
+            <h1>🧴 Skincare Guide</h1>
+            <p>Urutan pemakaian skincare yang benar untuk pagi dan malam agar kulitmu sehat dan terawat.</p>
+        </div>
+    </div>
+
+    <!-- ======= GUIDE SECTION ======= -->
+    <section class="guide-section">
+        <div class="container">
+
+            <!-- Tab Buttons -->
+            <div class="guide-tabs">
+                <button class="guide-tab-btn active" onclick="showTab('pagi', this)">☀️ Rutinitas Pagi</button>
+                <button class="guide-tab-btn" onclick="showTab('malam', this)">🌙 Rutinitas Malam</button>
+            </div>
+
+            <!-- PAGI -->
+            <div class="guide-content active" id="tab-pagi">
+                <h2 class="section-title">☀️ Rutinitas Skincare Pagi</h2>
+                <p class="section-subtitle">Lindungi kulitmu dari paparan sinar matahari dan polusi sepanjang hari</p>
+
+                <div class="guide-timeline">
+
+                    <div class="guide-step">
+                        <div class="step-number">1</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">🧼</span> Cleanser / Pembersih Wajah</h4>
+                            <p>Mulailah dengan mencuci wajah menggunakan facial wash yang lembut. Pilihlah yang sesuai dengan jenis kulit. Usap dengan gerakan melingkar selama 60 detik, lalu bilas dengan air dingin.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">2</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">💧</span> Toner</h4>
+                            <p>Gunakan toner untuk menyeimbangkan pH kulit dan mempersiapkan kulit menerima produk berikutnya. Tuangkan pada kapas atau tepuk-tepuk langsung ke wajah dengan telapak tangan.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">3</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">✨</span> Serum</h4>
+                            <p>Aplikasikan serum sesuai masalah kulitmu: Vitamin C untuk mencerahkan dan antioksidan, Niacinamide untuk meratakan warna kulit, atau Hyaluronic Acid untuk hidrasi. Gunakan 2-3 tetes saja.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">4</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">👁️</span> Eye Cream (Opsional)</h4>
+                            <p>Gunakan eye cream khusus untuk area di sekitar mata yang lebih tipis dan sensitif. Tepuk-tepuk dengan jari manis secara lembut untuk menjaga kelembapan di area tersebut.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">5</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">🧴</span> Moisturizer / Pelembap</h4>
+                            <p>Kunci semua bahan aktif dari produk sebelumnya dengan moisturizer. Pilih tekstur yang ringan (gel atau lotion) untuk kulit berminyak, dan yang lebih rich (krim) untuk kulit kering.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">6</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">☀️</span> Sunscreen / Tabir Surya</h4>
+                            <p>Langkah WAJIB di pagi hari! Gunakan sunscreen dengan minimal SPF 30 (idealnya SPF 50) sebelum keluar rumah. Aplikasikan 15-20 menit sebelum terpapar sinar matahari. Ulangi setiap 2-3 jam.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MALAM -->
+            <div class="guide-content" id="tab-malam" style="display:none;">
+                <h2 class="section-title">🌙 Rutinitas Skincare Malam</h2>
+                <p class="section-subtitle">Regenerasi dan perbaiki kulitmu saat tidur dengan rutinitas malam yang tepat</p>
+
+                <div class="guide-timeline">
+
+                    <div class="guide-step">
+                        <div class="step-number">1</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">🧹</span> Makeup Remover / Micellar Water</h4>
+                            <p>Jika menggunakan makeup, mulailah dengan membersihkan makeup terlebih dahulu menggunakan micellar water, cleansing oil, atau cleansing balm. Pastikan semua sisa makeup terangkat sempurna.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">2</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">🧼</span> Double Cleanse – Facial Wash</h4>
+                            <p>Lanjutkan dengan mencuci wajah menggunakan facial wash untuk membersihkan sisa polusi dan kotoran yang menempel sepanjang hari. Ini adalah teknik double cleansing yang efektif.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">3</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">💧</span> Toner</h4>
+                            <p>Gunakan toner untuk mengembalikan keseimbangan pH kulit setelah membersihkan wajah. Di malam hari, kamu bisa menggunakan toner yang lebih kaya untuk memberikan hidrasi ekstra.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">4</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">🔬</span> Treatment / Exfoliant (2-3x seminggu)</h4>
+                            <p>Gunakan AHA/BHA untuk eksfoliasi, atau Retinol untuk anti-aging. Produk ini lebih cocok di malam hari karena dapat membuat kulit lebih sensitif terhadap sinar matahari. Jangan gunakan setiap hari!</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">5</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">✨</span> Serum Malam</h4>
+                            <p>Gunakan serum yang mendukung regenerasi kulit seperti Retinol (anti-aging), Niacinamide (pori dan tone), atau Hyaluronic Acid (hidrasi intens). Kulit beregenerasi saat tidur, manfaatkan ini!</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">6</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">🌙</span> Night Cream / Moisturizer Malam</h4>
+                            <p>Gunakan night cream yang lebih kaya dan lebih lembap dibanding moisturizer pagi. Night cream membantu pemulihan dan regenerasi kulit selama tidur untuk wajah yang segar di pagi hari.</p>
+                        </div>
+                    </div>
+
+                    <div class="guide-step">
+                        <div class="step-number">7</div>
+                        <div class="step-body">
+                            <h4><span class="step-emoji">🫧</span> Sleeping Mask (Opsional)</h4>
+                            <p>Gunakan sleeping mask 2-3 kali seminggu sebagai langkah terakhir untuk memberikan hidrasi intens sepanjang malam. Kulit akan terasa lembap dan bercahaya saat bangun tidur.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tips Box -->
+            <div style="margin-top: 3rem; background: linear-gradient(135deg, #FFF8F4, #F8E7EB); border-radius: 20px; padding: 2rem; border: 1px solid #f0cdd6;">
+                <h3 style="color: #A34D68; margin-bottom: 1rem;">⚠️ Hal Penting yang Perlu Diingat</h3>
+                <div class="tips-list">
+                    <div class="tip-item"><span class="tip-icon">✅</span><span>Selalu aplikasikan produk dari tekstur paling encer ke paling kental.</span></div>
+                    <div class="tip-item"><span class="tip-icon">✅</span><span>Tunggu 1-2 menit antar produk agar produk meresap sempurna.</span></div>
+                    <div class="tip-item"><span class="tip-icon">✅</span><span>Jangan skip sunscreen di pagi hari, bahkan saat di dalam rumah!</span></div>
+                    <div class="tip-item"><span class="tip-icon">✅</span><span>Perkenalkan bahan aktif baru secara bertahap (patch test dulu).</span></div>
+                    <div class="tip-item"><span class="tip-icon">✅</span><span>Konsistensi adalah kunci — rutinitas yang dilakukan rutin lebih efektif.</span></div>
+                    <div class="tip-item"><span class="tip-icon">✅</span><span>Cukup tidur 7-8 jam untuk mendukung regenerasi kulit secara alami.</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======= CTA ======= -->
+    <div style="text-align:center; padding: 1rem 0 3rem;">
+        <a href="product-finder.html" class="btn btn-primary">💄 Lihat Rekomendasi Produk →</a>
+    </div>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Glow<span>ify</span></div>
+                    <p>Platform edukasi kecantikan yang membantu kamu memahami kulit dan menemukan panduan perawatan yang tepat.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="skin-type.html">Skin Type</a></li>
+                        <li><a href="skincare-guide.html">Skincare Guide</a></li>
+                        <li><a href="product-finder.html">Product Finder</a></li>
+                        <li><a href="beauty-tips.html">Beauty Tips</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tentang</h4>
+                    <ul>
+                        <li><a href="about.html">Tentang Glowify</a></li>
+                        <li><a href="about.html">Tujuan & Manfaat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>© 2024 Glowify – Dibuat oleh Atiqa Sari Hamsir | Kelas XI F | Tugas Informatika</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tab, btn) {
+            // Hide all content
+            document.querySelectorAll('.guide-content').forEach(el => el.style.display = 'none');
+            // Remove active from all buttons
+            document.querySelectorAll('.guide-tab-btn').forEach(b => b.classList.remove('active'));
+            // Show selected
+            document.getElementById('tab-' + tab).style.display = 'block';
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

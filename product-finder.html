@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Finder – Glowify</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">Glow<span>ify</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skin-type.html">Skin Type</a></li>
+                <li><a href="skincare-guide.html">Skincare Guide</a></li>
+                <li><a href="product-finder.html" class="active">Product Finder</a></li>
+                <li><a href="beauty-tips.html">Beauty Tips</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======= PAGE HEADER ======= -->
+    <div class="page-header">
+        <div class="container">
+            <h1>💄 Product Finder</h1>
+            <p>Temukan rekomendasi produk skincare terbaik yang sesuai dengan jenis dan kebutuhan kulitmu.</p>
+        </div>
+    </div>
+
+    <!-- ======= FILTER SECTION ======= -->
+    <div class="product-filter-section">
+        <div class="container">
+            <div class="filter-row">
+                <span class="filter-label">Jenis Kulit:</span>
+                <div class="filter-tags" id="skin-filter">
+                    <button class="filter-tag active" onclick="filterProducts('all', 'skin-filter', this)">Semua</button>
+                    <button class="filter-tag" onclick="filterProducts('normal', 'skin-filter', this)">Normal</button>
+                    <button class="filter-tag" onclick="filterProducts('berminyak', 'skin-filter', this)">Berminyak</button>
+                    <button class="filter-tag" onclick="filterProducts('kering', 'skin-filter', this)">Kering</button>
+                    <button class="filter-tag" onclick="filterProducts('kombinasi', 'skin-filter', this)">Kombinasi</button>
+                </div>
+            </div>
+            <br>
+            <div class="filter-row">
+                <span class="filter-label">Kategori:</span>
+                <div class="filter-tags" id="cat-filter">
+                    <button class="filter-tag active" onclick="filterCategory('all', this)">Semua</button>
+                    <button class="filter-tag" onclick="filterCategory('cleanser', this)">Cleanser</button>
+                    <button class="filter-tag" onclick="filterCategory('toner', this)">Toner</button>
+                    <button class="filter-tag" onclick="filterCategory('serum', this)">Serum</button>
+                    <button class="filter-tag" onclick="filterCategory('moisturizer', this)">Moisturizer</button>
+                    <button class="filter-tag" onclick="filterCategory('sunscreen', this)">Sunscreen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= PRODUCTS SECTION ======= -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="products-grid">
+
+                <!-- Product 1 -->
+                <div class="product-card" data-skin="berminyak" data-cat="cleanser">
+                    <div class="product-img-wrap">
+                        🧼
+                        <span class="product-category-badge">Cleanser</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🫧 Kulit Berminyak</span>
+                        <h4>Gentle Foam Cleanser</h4>
+                        <p>Pembersih wajah berbusa ringan yang efektif mengangkat minyak berlebih tanpa membuat kulit terasa tertarik.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-skin="kering" data-cat="cleanser">
+                    <div class="product-img-wrap">
+                        💦
+                        <span class="product-category-badge">Cleanser</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🍂 Kulit Kering</span>
+                        <h4>Hydrating Cream Cleanser</h4>
+                        <p>Pembersih wajah bertekstur krim yang membersihkan sekaligus melembapkan kulit kering dan sensitif.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-skin="berminyak" data-cat="toner">
+                    <div class="product-img-wrap">
+                        💧
+                        <span class="product-category-badge">Toner</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🫧 Kulit Berminyak</span>
+                        <h4>Pore-Refining Toner</h4>
+                        <p>Toner dengan kandungan BHA untuk membantu mengecilkan pori-pori dan mengontrol produksi minyak berlebih.</p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-skin="kering" data-cat="toner">
+                    <div class="product-img-wrap">
+                        🌊
+                        <span class="product-category-badge">Toner</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🍂 Kulit Kering</span>
+                        <h4>Hydrating Essence Toner</h4>
+                        <p>Toner bertekstur essence kaya dengan Hyaluronic Acid dan Glycerin untuk hidrasi intens pada kulit kering.</p>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-skin="normal" data-cat="serum">
+                    <div class="product-img-wrap">
+                        ✨
+                        <span class="product-category-badge">Serum</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🌿 Kulit Normal</span>
+                        <h4>Vitamin C Brightening Serum</h4>
+                        <p>Serum Vitamin C untuk mencerahkan dan meratakan warna kulit, mencegah penuaan dini dan flek hitam.</p>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-skin="berminyak" data-cat="serum">
+                    <div class="product-img-wrap">
+                        🔬
+                        <span class="product-category-badge">Serum</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🫧 Kulit Berminyak</span>
+                        <h4>Niacinamide 10% Serum</h4>
+                        <p>Serum Niacinamide konsentrasi tinggi untuk mengontrol minyak, mengecilkan pori, dan mencerahkan kulit.</p>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-skin="kering" data-cat="moisturizer">
+                    <div class="product-img-wrap">
+                        🧴
+                        <span class="product-category-badge">Moisturizer</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🍂 Kulit Kering</span>
+                        <h4>Rich Repair Cream</h4>
+                        <p>Krim pelembap kaya dengan Ceramide dan Shea Butter untuk memulihkan lapisan pelindung kulit kering.</p>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-skin="berminyak" data-cat="moisturizer">
+                    <div class="product-img-wrap">
+                        💫
+                        <span class="product-category-badge">Moisturizer</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🫧 Kulit Berminyak</span>
+                        <h4>Oil-Free Gel Moisturizer</h4>
+                        <p>Pelembap bertekstur gel ringan tanpa minyak, cocok untuk kulit berminyak dan rentan berjerawat.</p>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-skin="kombinasi" data-cat="moisturizer">
+                    <div class="product-img-wrap">
+                        ⚖️
+                        <span class="product-category-badge">Moisturizer</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">⚖️ Kulit Kombinasi</span>
+                        <h4>Balancing Fluid</h4>
+                        <p>Pelembap ringan yang menyeimbangkan kadar minyak dan kelembapan pada kulit kombinasi.</p>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card" data-skin="normal" data-cat="sunscreen">
+                    <div class="product-img-wrap">
+                        ☀️
+                        <span class="product-category-badge">Sunscreen</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🌿 Kulit Normal</span>
+                        <h4>Daily Sunscreen SPF 50+</h4>
+                        <p>Sunscreen ringan dengan SPF 50+ dan PA++++ untuk perlindungan maksimal dari sinar UVA dan UVB.</p>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card" data-skin="berminyak" data-cat="sunscreen">
+                    <div class="product-img-wrap">
+                        🌤️
+                        <span class="product-category-badge">Sunscreen</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🫧 Kulit Berminyak</span>
+                        <h4>Matte Finish Sunscreen SPF 50</h4>
+                        <p>Tabir surya dengan finish matte yang mengontrol minyak, cocok untuk kulit berminyak dan kombinasi.</p>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card" data-skin="kering" data-cat="serum">
+                    <div class="product-img-wrap">
+                        💎
+                        <span class="product-category-badge">Serum</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-skin-type">🍂 Kulit Kering</span>
+                        <h4>Hyaluronic Acid Serum</h4>
+                        <p>Serum Hyaluronic Acid multi-weight untuk hidrasi mendalam pada setiap lapisan kulit yang kering.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- No result message -->
+            <div id="no-result" style="display:none; text-align:center; padding: 3rem 0; color: #A34D68;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+                <h3>Tidak ada produk yang ditemukan</h3>
+                <p style="opacity:0.7;">Coba pilih filter yang berbeda</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Glow<span>ify</span></div>
+                    <p>Platform edukasi kecantikan yang membantu kamu memahami kulit dan menemukan panduan perawatan yang tepat.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="skin-type.html">Skin Type</a></li>
+                        <li><a href="skincare-guide.html">Skincare Guide</a></li>
+                        <li><a href="product-finder.html">Product Finder</a></li>
+                        <li><a href="beauty-tips.html">Beauty Tips</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Tentang</h4>
+                    <ul>
+                        <li><a href="about.html">Tentang Glowify</a></li>
+                        <li><a href="about.html">Tujuan & Manfaat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>© 2024 Glowify – Dibuat oleh Atiqa Sari Hamsir | Kelas XI F | Tugas Informatika</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSkin = 'all';
+        let currentCat = 'all';
+
+        function filterProducts(skin, groupId, btn) {
+            currentSkin = skin;
+            document.querySelectorAll('#' + groupId + ' .filter-tag').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilters();
+        }
+
+        function filterCategory(cat, btn) {
+            currentCat = cat;
+            document.querySelectorAll('#cat-filter .filter-tag').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const cards = document.querySelectorAll('.product-card');
+            let visible = 0;
+            cards.forEach(card => {
+                const skinMatch = currentSkin === 'all' || card.dataset.skin === currentSkin;
+                const catMatch = currentCat === 'all' || card.dataset.cat === currentCat;
+                if (skinMatch && catMatch) {
+                    card.style.display = 'block';
+                    visible++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            document.getElementById('no-result').style.display = visible === 0 ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>
