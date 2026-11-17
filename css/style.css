@@ -977,6 +977,55 @@ p {
     font-size: 1.5rem;
 }
 
+/* Author Profile Card */
+.author-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.8rem;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #F8E7EB;
+    box-shadow: 0 4px 15px rgba(163,77,104,0.08);
+    transition: all 0.3s ease;
+}
+
+.author-card:hover {
+    box-shadow: 0 8px 25px rgba(163,77,104,0.15);
+    transform: translateY(-3px);
+}
+
+.author-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #A34D68;
+    box-shadow: 0 6px 20px rgba(163,77,104,0.25);
+    flex-shrink: 0;
+}
+
+.author-details h4 {
+    color: #A34D68;
+    font-size: 1.35rem;
+    margin-bottom: 0.3rem;
+}
+
+.author-role {
+    font-size: 0.9rem;
+    color: #A34D68;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.author-bio {
+    font-size: 0.9rem;
+    color: #754052;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
 .team-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1137,4 +1186,11 @@ p {
     .tips-featured-icon { display: none; }
 
     .team-info { grid-template-columns: 1fr; }
+
+    .author-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+        padding: 1.5rem;
+    }
 }
